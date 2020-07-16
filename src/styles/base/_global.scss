@@ -4,6 +4,11 @@
   &::after {
     box-sizing: border-box;
   }
+  &:focus {
+    outline: 0;
+  }
+  -webkit-tap-highlight-color: rgba($white, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -68,4 +73,102 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
+}
+
+blockquote {
+  & footer,
+  & small {
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
+  & p {
+    font-style: italic;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &:focus,
+  &:active {
+    outline: 0 !important;
+  }
+}
+
+button {
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0 !important;
+  }
+}
+
+button,
+input[type='reset'],
+input[type='button'],
+input[type='submit'],
+select,
+input[type='file'] > input[type='button'] {
+  &::-moz-focus-inner {
+    outline: 0 !important;
+  }
+}
+
+legend {
+  margin-bottom: 2rem;
+  @include font-size(21px);
+}
+
+output {
+  padding-top: 8px;
+  @include font-size(14px);
+}
+
+label {
+  @include font-size(14px);
+  color: #aaaaaa;
+}
+
+footer {
+  padding: 15px 0;
+
+  & ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+
+    & li {
+      display: inline-block;
+
+      & a {
+        color: inherit;
+        padding: 15px;
+        font-weight: 500;
+        @include font-size(12px);
+        text-transform: uppercase;
+        border-radius: 3px;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid #eee;
+  height: 0;
+  box-sizing: content-box;
 }
