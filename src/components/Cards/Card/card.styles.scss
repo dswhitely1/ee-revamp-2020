@@ -1,0 +1,142 @@
+@import 'src/styles/lib/variables';
+@import 'src/styles/lib/mixins';
+
+.card {
+  border: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 6px;
+  color: rgba($black, 0.87);
+  background: $white;
+  width: 100%;
+  box-shadow: 0 1px 4px 0 rgba($black, 0.14);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  @include font-size($font-size-base);
+}
+
+.card-plain {
+  background: transparent;
+  box-shadow: none;
+}
+
+.card-profile {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.card-blog {
+  margin-top: 60px;
+}
+
+.card-raised {
+  box-shadow: 0 16px 38px -12px rgba($black, 0.56),
+    0 4px 25px 0 rgba($black, 0.12), 0 8px 10px -5px rgba($black, 0.2);
+}
+
+.card-background {
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  *::after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: '';
+    background-color: rgba($black, 0.56);
+    border-radius: 6px;
+  }
+  & small {
+    color: rgba($white, 0.7) !important;
+  }
+}
+
+.card-pricing {
+  text-align: center;
+  &::after {
+    background-color: rgba($black, 0.7) !important;
+  }
+  & ul {
+    list-style: none;
+    padding: 0;
+    max-width: 240px;
+    margin: 10px auto;
+    & li {
+      color: $gray0;
+      text-align: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba($gray0, 0.3);
+      &:first-child {
+        border: 0;
+      }
+      & b {
+        color: #3c4858;
+      }
+      @include icon-classes(true) {
+        position: relative;
+        top: 7px;
+      }
+    }
+  }
+  & h1 {
+    margin-top: 30px;
+    & small {
+      display: inline-flex;
+      height: 0;
+      @include font-size(18 / 16 * $defaultRem);
+      &:first-child {
+        position: relative;
+        top: -17px;
+        @include font-size(26 / 16 * $defaultRem);
+      }
+    }
+  }
+}
+
+.card-pricing-color {
+  & ul li {
+    color: $white;
+    border-color: rgba($white, 0.3);
+    & b {
+      color: $white;
+      font-weight: 700;
+    }
+    @include icon-classes(true) {
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}
+
+.card-product {
+  margin-top: 30px;
+}
+
+@each $key, $value in $theme-colors {
+  .card-#{$key} {
+    background: linear-gradient(60deg, lighten($value, 2%), darken($value, 2%));
+    & h1 small {
+      color: rgba($white, 0.8);
+    }
+    color: $white;
+  }
+}
+
+.card-chart {
+  & p {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.card-login {
+  transform: translate3d(0, 0, 0);
+  transition: all 300ms linear;
+}
