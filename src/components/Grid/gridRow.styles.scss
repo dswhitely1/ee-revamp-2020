@@ -1,0 +1,10 @@
+@import 'src/styles/lib/variables';
+@import 'src/styles/lib/mixins';
+
+.row {
+  @include make-row();
+
+  > * {
+    @include make-col-ready();
+  }
+}
