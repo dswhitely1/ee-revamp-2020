@@ -1,0 +1,20 @@
+@mixin icon-classes($svg: false) {
+  @if $svg {
+    & .fab,
+    & .fas,
+    & .far,
+    & .fal,
+    & svg,
+    & .material-icons {
+      @content;
+    }
+  } @else {
+    & .fab,
+    & .fas,
+    & .far,
+    & .fal,
+    & .material-icons {
+      @content;
+    }
+  }
+}

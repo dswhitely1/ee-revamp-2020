@@ -1,34 +1,12 @@
 @import 'src/styles/lib/variables';
 @import 'src/styles/lib/mixins';
 
-$gray0: #999 !default;
 %icons {
   position: relative;
   display: inline-block;
   top: 0;
   margin-right: 4px;
   vertical-align: middle;
-}
-
-@mixin icon-classes($svg: false) {
-  @if $svg {
-    & .fab,
-    & .fas,
-    & .far,
-    & .fal,
-    & svg,
-    & .material-icons {
-      @content;
-    }
-  } @else {
-    & .fab,
-    & .fas,
-    & .far,
-    & .fal,
-    & .material-icons {
-      @content;
-    }
-  }
 }
 
 @mixin button-box-shadow($color, $hover: false) {
