@@ -63,6 +63,30 @@ $theme-colors: (
   'light': $light,
 ) !default;
 
+$twitter: #55acee !default;
+$facebook: #3b5998 !default;
+$google: #dd4b39 !default;
+$linkedIn: #0876b4 !default;
+$pinterest: #cc2127 !default;
+$youtube: #e52d27 !default;
+$tumblr: #35465c !default;
+$behance: #1769ff !default;
+$dribbble: #ea4c89 !default;
+$reddit: #ff4500 !default;
+
+$social-media-colors: (
+  'twitter': $twitter,
+  'facebook': $facebook,
+  'google': $google,
+  'linkedIn': $linkedIn,
+  'pinterest': $pinterest,
+  'youtube': $youtube,
+  'tumblr': $tumblr,
+  'behance': $behance,
+  'dribbble': $dribbble,
+  'reddit': $reddit,
+) !default;
+
 $htmlFontSize: 10 !default;
 $defaultRem: 1.6rem !default;
 $spacer: $defaultRem !default;
@@ -85,6 +109,7 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 $stretched-link-pseudo-element: after !default;
 $stretched-link-z-index: 1 !default;
 $paragraph-margin-bottom: $defaultRem !default;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -93,6 +118,7 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
 ) !default;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -100,6 +126,15 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px,
 ) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+
+$gutters: $spacers !default;
+
+$container-padding-x: 1rem !default;
+
 $font-family-sans-serif: Lato, Helvetica, Arial, sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace !default;
