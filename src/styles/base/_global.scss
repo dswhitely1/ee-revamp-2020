@@ -136,6 +136,8 @@ label {
 }
 
 footer {
+  background: $dark;
+  color: $secondary;
   padding: 15px 0;
 
   & ul {
@@ -150,7 +152,7 @@ footer {
         color: inherit;
         padding: 15px;
         font-weight: 500;
-        @include font-size(12px);
+        @include font-size(12 / 16 * $defaultRem);
         text-transform: uppercase;
         border-radius: 3px;
         text-decoration: none;
