@@ -17,10 +17,7 @@ function Footer({ fluid, white }) {
     [`${classPrefix}a`]: true,
     [`${classPrefix}white-color`]: white,
   });
-  const block = cx({
-    [`${classPrefix}block`]: true,
-    [`${classPrefix}white-color`]: white,
-  });
+
   return (
     <footer className={`${classPrefix}footer`}>
       <div className={container}>
