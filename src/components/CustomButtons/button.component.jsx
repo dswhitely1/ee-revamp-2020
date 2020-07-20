@@ -42,4 +42,38 @@ const RegularButton = forwardRef((props, ref) => {
   );
 });
 
+RegularButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  size: PropTypes.oneOf(['sm', 'lg']),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'success',
+    'info',
+    'warning',
+    'danger',
+    'twitter',
+    'facebook',
+    'google',
+    'linkedIn',
+    'pinterest',
+    'youtube',
+    'tumblr',
+    'behance',
+    'dribbble',
+    'reddit',
+    'github',
+    'transparent',
+  ]),
+  round: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  disabled: PropTypes.bool,
+  simple: PropTypes.bool,
+  block: PropTypes.bool,
+  link: PropTypes.bool,
+  justIcon: PropTypes.bool,
+  muiClasses: PropTypes.object,
+};
+
 export default RegularButton;
