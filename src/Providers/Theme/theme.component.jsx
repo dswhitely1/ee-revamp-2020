@@ -1,9 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StylesProvider } from '@material-ui/core';
+import {
+  createMuiTheme,
+  StylesProvider,
+  MuiThemeProvider,
+} from '@material-ui/core';
+
+const theme = {
+  overrides: {
+    MuiLink: {
+      underlineHover: {
+        textDecoration: 'none',
+        '&:hover': {
+          textDecoration: 'none',
+        },
+      },
+    },
+  },
+};
+
+const muiTheme = createMuiTheme(theme);
 
 function ThemeProvider({ children }) {
-  return <StylesProvider injectFirst>{children}</StylesProvider>;
+  return (
+    <StylesProvider injectFirst>
+      <MuiThemeProvider theme={muiTheme}>{children}</MuiThemeProvider>
+    </StylesProvider>
+  );
 }
 
 ThemeProvider.propTypes = {
