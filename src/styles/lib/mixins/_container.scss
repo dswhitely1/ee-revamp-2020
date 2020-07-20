@@ -4,4 +4,12 @@
   padding-left: $padding-x;
   margin-right: auto;
   margin-left: auto;
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+  &::after {
+    clear: both;
+  }
 }
