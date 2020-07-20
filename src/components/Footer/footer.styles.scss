@@ -45,6 +45,9 @@
   color: $secondary;
   text-decoration: none;
   background-color: transparent;
+  &:hover {
+    color: $light;
+  }
 }
 
 .footer-list {
