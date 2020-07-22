@@ -29,9 +29,6 @@
     width: 100%;
     border: none !important;
   }
-  &::before {
-    background-color: rgba($black, 0.65);
-  }
   &::before,
   &::after {
     display: block;
