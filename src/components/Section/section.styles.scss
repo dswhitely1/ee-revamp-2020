@@ -1,0 +1,54 @@
+@import 'src/styles/lib/variables';
+@import 'src/styles/lib/mixins';
+
+$inverted-background: #351a1a !default;
+
+$section-padding: 128 / 16 * $defaultRem !default;
+$section-margin: 48 / 16 * $defaultRem !default;
+
+.section {
+  padding: $section-padding 0;
+  background-color: inherit;
+  border-radius: 8px;
+  margin: $section-margin;
+  opacity: 0.9;
+  text-align: center;
+  transition: opacity 500ms ease-out;
+  &:hover,
+  &:focus {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  @include media-breakpoint-down('sm') {
+    opacity: 1;
+    margin: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-inverted {
+  background-color: $inverted-background;
+  color: $secondary;
+}
+
+.section-header {
+  padding: 0;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: auto;
+  opacity: 1;
+  @include media-breakpoint-up('md') {
+    height: calc(100vh - 250px);
+  }
+  @include media-breakpoint-down('md') {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
