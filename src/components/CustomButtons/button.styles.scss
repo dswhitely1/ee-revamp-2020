@@ -30,11 +30,10 @@
   position: relative;
   padding: 12px 30px;
   margin: 0.3125rem 1px;
-  font-size: 1.2rem;
-  font-weight: 400;
+  @include font-size($button-font-size);
+  font-weight: 500;
   font-family: $font-family-base;
   text-transform: uppercase;
-  letter-spacing: 0;
   will-change: box-shadow, transform;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
     background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -42,6 +41,7 @@
   text-align: center;
   white-space: nowrap;
   touch-action: manipulation;
+  letter-spacing: 1.25px;
   cursor: pointer;
   &:hover,
   &:focus {
