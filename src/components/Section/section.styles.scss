@@ -44,11 +44,6 @@ $section-margin: 48 / 16 * $defaultRem !default;
   height: auto;
   opacity: 1;
   @include media-breakpoint-up('md') {
-    height: calc(100vh - 250px);
-  }
-  @include media-breakpoint-down('md') {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100vh;
   }
 }
