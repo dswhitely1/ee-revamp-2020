@@ -10,11 +10,8 @@ function LandingPage({ ...rest }) {
   return (
     <div>
       <LandingPageNavBar color="primary" {...rest} />
-      <div
-        className="landing-page-wrapper"
-        style={{ backgroundImage: `url(${header})` }}
-      >
-        <div className="landing-page-full-page">
+      <div className="landing-page-wrapper">
+        <div className="landing-page-full-width">
           <Switch>
             <Route
               to="/home/emergency-electric-inc"
