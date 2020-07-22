@@ -1,9 +1,6 @@
 @import 'src/styles/lib/variables';
 @import 'src/styles/lib/mixins';
 
-.footer-block {
-}
-
 .footer-branding {
   margin: 0;
   @include font-size(14 / 16 * $defaultRem);
