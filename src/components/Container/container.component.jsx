@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import './container.styles.scss';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 function Container({ children, className, fluid, maxWidth, ...rest }) {
   const containerClassName = cx({

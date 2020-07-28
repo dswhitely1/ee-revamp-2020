@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
 import {
   AppBar,
-  Toolbar,
-  Hidden,
   Drawer,
+  Hidden,
   List,
   ListItem,
   ListItemText,
+  Toolbar,
 } from '@material-ui/core';
 import Menu from '@material-ui/icons/Menu';
+import cx from 'classnames';
 import Button from 'components/CustomButtons/button.component';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
-import './landingPageNavBar.styles.scss';
 function LandingPageNavBar({ color, brandText }) {
   const [open, setOpen] = useState(false);
   const handleDrawerToggle = () => setOpen(!open);

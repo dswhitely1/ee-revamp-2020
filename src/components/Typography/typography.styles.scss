@@ -1,7 +1,0 @@
-@import 'src/styles/lib/variables';
-
-@each $key, $value in $theme-colors {
-  .typography-#{$key} {
-    color: $value;
-  }
-}

@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import './section.styles.scss';
-import header from 'assets/header.jpg';
 import { makeStyles } from '@material-ui/core';
+import header from 'assets/header.jpg';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   background: {

@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import './cardBody.styles.scss';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 function CardBody({
   className,

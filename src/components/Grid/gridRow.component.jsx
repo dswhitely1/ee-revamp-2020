@@ -1,7 +1,6 @@
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import './gridRow.styles.scss';
+import React from 'react';
 
 function GridRow({ children, className, ...rest }) {
   const gridRowClassNames = cx({

@@ -1,10 +1,7 @@
-import React from 'react';
+import { Button } from '@material-ui/core';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-
-import './button.styles.scss';
-import { forwardRef } from 'react';
-import { Button } from '@material-ui/core';
+import React, { forwardRef } from 'react';
 
 const RegularButton = forwardRef((props, ref) => {
   const {

@@ -1,8 +1,8 @@
-import React from 'react';
-import Section from 'components/Section/section.component';
 import Container from 'components/Container/container.component';
 import Button from 'components/CustomButtons/button.component';
+import Section from 'components/Section/section.component';
 import Typography from 'components/Typography/typography.component';
+import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 function Header() {

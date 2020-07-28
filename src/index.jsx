@@ -1,9 +1,8 @@
+import LandingPage from 'layouts/LandingPage/landingPage.component';
+import Providers from 'Providers/providers.component';
 import React from 'react';
 import { render } from 'react-dom';
-import 'index.scss';
-import Providers from 'Providers/providers.component';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import LandingPage from 'layouts/LandingPage/landingPage.component';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <Providers>

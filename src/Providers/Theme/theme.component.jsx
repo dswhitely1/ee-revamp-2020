@@ -1,10 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import {
   createMuiTheme,
-  StylesProvider,
+  CssBaseline,
   MuiThemeProvider,
+  StylesProvider,
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const theme = {
   overrides: {
@@ -24,7 +25,10 @@ const muiTheme = createMuiTheme(theme);
 function ThemeProvider({ children }) {
   return (
     <StylesProvider injectFirst>
-      <MuiThemeProvider theme={muiTheme}>{children}</MuiThemeProvider>
+      <MuiThemeProvider theme={muiTheme}>
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>
     </StylesProvider>
   );
 }

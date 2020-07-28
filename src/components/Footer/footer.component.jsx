@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import './footer.styles.scss';
 import { Link, List, ListItem } from '@material-ui/core';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Scrollchor from 'react-scrollchor';
 import footerLinks from './footerLinks.js';
 
