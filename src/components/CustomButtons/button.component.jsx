@@ -2,8 +2,10 @@ import { Button } from '@material-ui/core';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { forwardRef } from 'react';
+import { buttonStyles } from 'styles/components/button.styles';
 
 const RegularButton = forwardRef((props, ref) => {
+  const classes = buttonStyles();
   const {
     children,
     className,
@@ -20,16 +22,16 @@ const RegularButton = forwardRef((props, ref) => {
     ...rest
   } = props;
   const btnClasses = cx({
-    btn: true,
-    [`btn-${size}`]: size,
-    [`btn-${color}`]: color,
-    'btn-round': round,
-    'btn-full-width': fullWidth,
-    'btn-disabled': disabled,
-    'btn-simple': simple,
-    'btn-block': block,
-    'btn-link': link,
-    'btn-just-icon': justIcon,
+    [classes.root]: true,
+    [classes[`${size}`]]: size,
+    [classes[`${color}`]]: color,
+    [classes.round]: round,
+    [classes.fullWidth]: fullWidth,
+    [classes.disabled]: disabled,
+    [classes.simple]: simple,
+    [classes.block]: block,
+    [classes.link]: link,
+    [classes.justIcon]: justIcon,
     [className]: className !== undefined,
   });
   return (

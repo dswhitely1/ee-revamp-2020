@@ -12,53 +12,46 @@ import cx from 'classnames';
 import Button from 'components/CustomButtons/button.component';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { landingPageNavBarStyles } from 'styles/components/landingPageNavBar.styles';
 
 function LandingPageNavBar({ color, brandText }) {
+  const classes = landingPageNavBarStyles();
   const [open, setOpen] = useState(false);
   const handleDrawerToggle = () => setOpen(!open);
-  const classPrefix = 'landing-page-nav-bar-';
 
   const appBarClasses = cx({
-    [`${classPrefix}appbar`]: true,
-    [`${classPrefix}${color}`]: color,
+    [classes.root]: true,
+    [classes[color]]: color,
   });
   return (
     <AppBar position="static" className={appBarClasses}>
-      <Toolbar className={`${classPrefix}container`}>
+      <Toolbar className={classes.container}>
         <Hidden smDown>
-          <div className={`${classPrefix}flex`}>
-            <Button
-              href="#"
-              className={`${classPrefix}title`}
-              color="transparent"
-            >
+          <div className={classes.flex}>
+            <Button href="#" className={classes.title} color="transparent">
               {brandText}
             </Button>
           </div>
         </Hidden>
         <Hidden mdUp>
-          <div className={`${classPrefix}flex`}>
-            <Button
-              href="#"
-              className={`${classPrefix}title`}
-              color="transparent"
-            >
+          <div className={classes.flex}>
+            <Button href="#" className={classes.title} color="transparent">
               {brandText}
             </Button>
           </div>
         </Hidden>
         <Hidden smDown>
-          <List className={`${classPrefix}list`}>
-            <ListItem className={`${classPrefix}list-item`}>
+          <List className={classes.list}>
+            <ListItem className={classes.listItem}>
               <Button
                 color="transparent"
                 href="tel:5027274823"
-                className={`${classPrefix}nav-link`}
+                className={classes.navLink}
               >
                 <ListItemText
                   primary="502-727-4823"
                   disableTypography
-                  className={`${classPrefix}list-item-text`}
+                  className={classes.listItemText}
                 />
               </Button>
             </ListItem>
@@ -66,7 +59,7 @@ function LandingPageNavBar({ color, brandText }) {
         </Hidden>
         <Hidden mdUp>
           <Button
-            className={`${classPrefix}side-bar-button`}
+            className={classes.sideBarButton}
             color="transparent"
             justIcon
             aria-label="open drawer"
@@ -81,21 +74,21 @@ function LandingPageNavBar({ color, brandText }) {
               variant="temporary"
               anchor="right"
               open={open}
-              classes={{ paper: `${classPrefix}drawer-paper` }}
+              classes={{ paper: classes.drawerPaper }}
               onClose={handleDrawerToggle}
               ModalProps={{ keepMounted: true }}
             >
-              <List className={`${classPrefix}list`}>
-                <ListItem className={`${classPrefix}list-item`}>
+              <List className={classes.list}>
+                <ListItem className={classes.listItem}>
                   <Button
                     color="primary"
                     href="tel:5027274823"
-                    className={`${classPrefix}nav-link`}
+                    className={classes.navLink}
                   >
                     <ListItemText
                       primary="502-727-4823"
                       disableTypography
-                      className={`${classPrefix}list-item-text`}
+                      className={classes.listItemText}
                     />
                   </Button>
                 </ListItem>
@@ -111,7 +104,6 @@ function LandingPageNavBar({ color, brandText }) {
 LandingPageNavBar.defaultProps = {
   brandText: 'Emergency Electric Inc',
 };
-
 LandingPageNavBar.propTypes = {
   brandText: PropTypes.string,
   color: PropTypes.oneOf([

@@ -3,37 +3,40 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Scrollchor from 'react-scrollchor';
+import { footerStyles } from 'styles/components/footer.styles';
 import footerLinks from './footerLinks.js';
 
 function Footer({ fluid, white }) {
-  const classPrefix = 'footer-';
+  const classes = footerStyles();
+  const classPrefix = 'footer';
   const container = cx({
-    [`${classPrefix}container`]: !fluid,
-    [`${classPrefix}container-fluid`]: fluid,
-    [`${classPrefix}white-color`]: white,
+    [classes.container]: !fluid,
+    [classes.containerFluid]: fluid,
+    [classes.whiteColor]: white,
   });
   const anchor = cx({
-    [`${classPrefix}a`]: true,
-    [`${classPrefix}white-color`]: white,
+    [classes.a]: true,
+    [classes.whiteColor]: white,
   });
 
   return (
-    <footer className={`${classPrefix}footer`}>
+    <footer className={classes.root}>
       <div className={container}>
-        <List className={`${classPrefix}list`}>
+        <List className={classes.list}>
           {footerLinks.map(({ title, link, key }) => (
-            <ListItem className={`${classPrefix}inline-block`} key={key}>
+            <ListItem className={classes.inlineBlock} key={key}>
               <Link component={Scrollchor} to={link} className={anchor}>
                 {title}
               </Link>
             </ListItem>
           ))}
         </List>
-        <p className={`${classPrefix}branding`}>
+        <p>
           &copy; {`${new Date().getFullYear()} `}
           <Link
             href="https://www.donwhitely.com"
             target="_blank"
+            color="secondary"
             className={anchor}
           >
             Digital Solutions By Don

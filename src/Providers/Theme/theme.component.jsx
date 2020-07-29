@@ -32,6 +32,35 @@ const theme = {
         },
       },
     },
+    MuiCssBaseline: {
+      '@global': {
+        footer: {
+          padding: '15px 0',
+          '& ul': {
+            marginBottom: 0,
+            padding: 0,
+            listStyle: 'none',
+            '& li': {
+              display: 'inline-block',
+              '& a': {
+                color: 'inherit',
+                padding: 15,
+                fontWeight: 500,
+                fontSize: 12,
+                textTransform: 'uppercase',
+                borderRadius: 3,
+                textDecoration: 'none',
+                display: 'block',
+                position: 'relative',
+                '&:hover': {
+                  textDecoration: 'none',
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
 };
 
