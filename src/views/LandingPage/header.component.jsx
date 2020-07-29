@@ -8,7 +8,7 @@ import { Link as RouterLink } from 'react-router-dom';
 function Header() {
   return (
     <Section header>
-      <Container>
+      <Container header>
         <Typography
           variant="h1"
           color="primary"

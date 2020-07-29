@@ -1,13 +1,14 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-function Container({ children, className, fluid, maxWidth, ...rest }) {
+import { containerStyles } from 'styles/components/container.styles';
+function Container({ children, className, header, top, description, ...rest }) {
+  const classes = containerStyles();
   const containerClassName = cx({
-    container: !fluid && maxWidth === undefined,
-    'container-fluid': fluid,
-    [`container-${maxWidth}`]: !fluid && maxWidth,
-    [className]: className !== undefined,
+    [classes.root]: true,
+    [classes.header]: header,
+    [classes.top]: top,
+    [classes.description]: description,
   });
 
   return (
@@ -20,8 +21,9 @@ function Container({ children, className, fluid, maxWidth, ...rest }) {
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  fluid: PropTypes.bool,
-  maxWidth: PropTypes.oneOf(['sm', 'md', 'lg', 'xl', 'xxl']),
+  header: PropTypes.bool,
+  description: PropTypes.bool,
+  top: PropTypes.bool,
 };
 
 export default Container;

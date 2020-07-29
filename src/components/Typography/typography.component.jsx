@@ -1,35 +1,52 @@
+import { Typography } from '@material-ui/core';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { typographyStyles } from 'styles/components/typography.styles';
 
-function Typography({ variant, content, color, className }) {
-  const Element = variant;
+function CustomTypography({
+  className,
+  content,
+  header,
+  noMargin,
+  spacing,
+  title,
+  ...rest
+}) {
+  const classes = typographyStyles();
   const typographyClasses = cx({
-    [`typography-${color}`]: color,
+    [classes.root]: true,
+    [classes.header]: header,
+    [classes.noMargin]: noMargin,
+    [classes.spacing]: spacing,
+    [classes.title]: title,
     [className]: className !== undefined,
   });
 
-  return <Element className={typographyClasses}>{content}</Element>;
+  return (
+    <Typography className={typographyClasses} {...rest}>
+      {content}
+    </Typography>
+  );
 }
 
-Typography.defaultProps = {
-  color: 'dark',
-  variant: 'p',
-};
-
-Typography.propTypes = {
-  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']),
+CustomTypography.propTypes = {
+  variant: PropTypes.string,
   color: PropTypes.oneOf([
+    'initial',
+    'inherit',
     'primary',
     'secondary',
-    'success',
-    'danger',
-    'info',
-    'warning',
-    'dark',
+    'textPrimary',
+    'textSecondary',
+    'error',
   ]),
   content: PropTypes.string.isRequired,
+  title: PropTypes.bool,
+  spacing: PropTypes.bool,
+  noMargin: PropTypes.bool,
+  header: PropTypes.bool,
   className: PropTypes.string,
 };
 
-export default Typography;
+export default CustomTypography;
