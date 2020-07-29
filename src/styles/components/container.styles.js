@@ -15,6 +15,9 @@ export const containerStyles = makeStyles((theme) => ({
       paddingTop: 0,
       paddingBottom: 0,
     },
+    '& > h4': {
+      textTransform: 'uppercase',
+    },
   },
   header: {
     display: 'flex',
@@ -46,7 +49,7 @@ export const containerStyles = makeStyles((theme) => ({
   },
   inverted: {
     backgroundColor: '#351a1a',
-    color: theme.palette.secondary,
+    color: theme.palette.secondary.main,
     ...transition,
     opacity: 0.8,
     '&:hover': {
