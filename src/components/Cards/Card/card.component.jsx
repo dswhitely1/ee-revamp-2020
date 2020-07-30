@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { cardStyles } from 'styles/components/card.styles';
 
 function Card({
   className,
@@ -18,20 +19,21 @@ function Card({
   login,
   ...rest
 }) {
+  const classes = cardStyles();
   const cardClasses = cx({
-    card: true,
-    'card-plain': plain,
-    'card-profile': profile,
-    'card-blog': blog,
-    'card-raised': raised,
-    'card-background': background,
-    'card-pricing-color':
+    [classes.root]: true,
+    [classes.cardPlain]: plain,
+    [classes.cardProfile]: profile || testimonial,
+    [classes.cardBlog]: blog,
+    [classes.cardRaised]: raised,
+    [classes.cardBackground]: background,
+    [classes.cardPricingColor]:
       (pricing && color !== undefined) || (pricing && background !== undefined),
-    [`card-${color}`]: color,
-    'card-pricing': pricing,
-    'card-product': product,
-    'card-chart': chart,
-    'card-login': login,
+    [classes[color]]: color,
+    [classes.cardPricing]: pricing,
+    [classes.cardProduct]: product,
+    [classes.cardChart]: chart,
+    [classes.cardLogin]: login,
     [className]: className !== undefined,
   });
 

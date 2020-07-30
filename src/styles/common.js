@@ -68,8 +68,8 @@ const container = {
   ...clearFix,
 };
 
-const primaryColor = ['#670300'];
-const secondaryColor = ['#b48a66'];
+const primaryColor = ['#670300', '#6f0300', '#5f0300', '#6d0300', '#570300'];
+const secondaryColor = ['#b48a66', '#c2956e', '#a67f53', 'bf926c', '#977456'];
 const warningColor = [
   '#ff9800',
   '#ffa726',
@@ -394,4 +394,6 @@ export {
   cardTitle,
   cardSubtitle,
   cardLink,
+  primaryColor,
+  secondaryColor,
 };

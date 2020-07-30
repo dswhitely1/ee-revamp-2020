@@ -10,7 +10,7 @@ export const sectionStyles = makeStyles((theme) => ({
   },
   inverted: {
     backgroundColor: '#351a1a',
-    color: theme.palette.secondary,
+    color: theme.palette.secondary.main,
   },
   header: {
     minHeight: theme.spacing(60),
