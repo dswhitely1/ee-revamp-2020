@@ -12,8 +12,8 @@ export const containerStyles = makeStyles((theme) => ({
       paddingBottom: theme.spacing(3),
     },
     [theme.breakpoints.down('sm')]: {
-      paddingTop: 0,
-      paddingBottom: 0,
+      paddingTop: 32,
+      paddingBottom: 32,
     },
     '& > h4': {
       textTransform: 'uppercase',
@@ -46,6 +46,9 @@ export const containerStyles = makeStyles((theme) => ({
       opacity: 1,
       ...transition,
     },
+    [theme.breakpoints.down('sm')]: {
+      opacity: 1,
+    },
   },
   inverted: {
     backgroundColor: '#351a1a',
@@ -55,6 +58,9 @@ export const containerStyles = makeStyles((theme) => ({
     '&:hover': {
       opacity: 1,
       ...transition,
+    },
+    [theme.breakpoints.down('sm')]: {
+      opacity: 1,
     },
   },
 }));
