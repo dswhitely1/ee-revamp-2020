@@ -4,6 +4,8 @@ import Container from 'components/Container/container.component';
 import GridContainer from 'components/Grid/gridContainer.component';
 import GridItem from 'components/Grid/gridItem.component';
 import Typography from 'components/Typography/typography.component';
+import Card from 'components/Cards/Card/card.component';
+import CardBody from 'components/Cards/CardBody/cardBody.component';
 
 const testimonials = [
   {
@@ -34,6 +36,18 @@ function Testimonials() {
           content="Hear From Our Customers"
           color="primary"
         />
+        <GridContainer>
+          {testimonials.map(({ author, content, id }) => (
+            <GridItem xs={12} sm={6} key={id}>
+              <Card>
+                <CardBody>
+                  <Typography content={content} />
+                  <cite>{author}</cite>
+                </CardBody>
+              </Card>
+            </GridItem>
+          ))}
+        </GridContainer>
       </Container>
     </Section>
   );

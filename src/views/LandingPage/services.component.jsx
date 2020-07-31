@@ -35,7 +35,7 @@ function Services() {
             content="What Others Say"
             link="testimonials"
           />
-          <LandingPageButton scrollButton color="secondary" round />
+          <LandingPageButton scrollButton color="secondary" simple size="lg" />
         </ButtonContainer>
       </Container>
     </Section>

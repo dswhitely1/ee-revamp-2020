@@ -20,7 +20,7 @@ const cardColor = (color) => ({
 });
 
 export const cardStyles = makeStyles(() => ({
-  root: {
+  card: {
     border: 0,
     marginBottom: 30,
     marginTop: 30,

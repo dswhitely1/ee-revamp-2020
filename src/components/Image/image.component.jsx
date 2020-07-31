@@ -4,7 +4,7 @@ import { imageStyles } from 'styles/components/image.styles';
 
 function Image({ src, alt }) {
   const classes = imageStyles();
-  return <img src={src} alt={alt} className={classes.root} />;
+  return <img src={src} alt={alt} className={classes.image} />;
 }
 
 Image.propTypes = {

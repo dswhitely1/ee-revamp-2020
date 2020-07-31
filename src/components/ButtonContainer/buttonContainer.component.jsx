@@ -6,7 +6,7 @@ import cx from 'classnames';
 function ButtonContainer({ children, form }) {
   const classes = buttonContainerStyles();
   const buttonContainerClasses = cx({
-    [classes.root]: true,
+    [classes.buttonContainer]: true,
     [classes.form]: form,
   });
   return <div className={buttonContainerClasses}>{children}</div>;

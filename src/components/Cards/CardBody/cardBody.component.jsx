@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { cardBodyStyles } from 'styles/components/cardBody.styles';
 
 function CardBody({
   className,
@@ -15,16 +16,18 @@ function CardBody({
   calendar,
   ...rest
 }) {
+  const classes = cardBodyStyles();
   const cardBodyClasses = cx({
-    'card-body': true,
-    'card-body-background': background,
-    'card-body-plain': plain,
-    'card-body-form-horizontal': formHorizontal,
-    'card-body-pricing': pricing,
-    'card-body-sign-up': signUp,
-    'card-body-color': color,
-    'card-body-profile': profile,
-    'card-body-calendar': calendar,
+    [classes.cardBody]: true,
+    [classes.cardBodyBackground]: background,
+    [classes.cardBodyPlain]: plain,
+    [classes.cardBodyFormHorizontal]: formHorizontal,
+    [classes.cardBodyPricing]: pricing,
+    [classes.cardBodySignUp]: signUp,
+    [classes.cardBodyColor]: color,
+    [classes.cardBodyProfile]: profile,
+    [classes.cardBodyCalendar]: calendar,
+    [className]: className !== undefined,
   });
 
   return (

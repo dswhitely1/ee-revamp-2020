@@ -15,7 +15,7 @@ function CustomContainer({
 }) {
   const classes = containerStyles();
   const containerClassName = cx({
-    [classes.root]: true,
+    [classes.container]: true,
     [classes.background]: !header,
     [classes.inverted]: !header && inverted,
     [classes.header]: header,

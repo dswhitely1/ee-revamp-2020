@@ -9,7 +9,7 @@ const positionFooter = {
 
 export const footerStyles = makeStyles((theme) => ({
   block: {},
-  root: {
+  footer: {
     bottom: 0,
     padding: theme.spacing(2, 0),
     zIndex: 4,

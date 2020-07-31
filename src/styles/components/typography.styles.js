@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 
 export const typographyStyles = makeStyles((theme) => ({
-  root: {
+  typography: {
     marginBottom: theme.spacing(3),
   },
   header: {

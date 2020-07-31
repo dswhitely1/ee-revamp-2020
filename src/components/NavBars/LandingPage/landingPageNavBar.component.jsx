@@ -20,7 +20,7 @@ function LandingPageNavBar({ color, brandText }) {
   const handleDrawerToggle = () => setOpen(!open);
 
   const appBarClasses = cx({
-    [classes.root]: true,
+    [classes.appBar]: true,
     [classes[color]]: color,
   });
   return (

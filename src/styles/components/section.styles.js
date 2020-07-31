@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import header from 'assets/header.jpg';
 
 export const sectionStyles = makeStyles((theme) => ({
-  root: {
+  section: {
     padding: theme.spacing(8, 0),
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(4, 0),

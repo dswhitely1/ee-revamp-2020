@@ -15,7 +15,7 @@ function CustomTypography({
 }) {
   const classes = typographyStyles();
   const typographyClasses = cx({
-    [classes.root]: true,
+    [classes.typography]: true,
     [classes.header]: header,
     [classes.noMargin]: noMargin,
     [classes.spacing]: spacing,

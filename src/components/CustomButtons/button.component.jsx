@@ -22,7 +22,7 @@ const RegularButton = forwardRef((props, ref) => {
     ...rest
   } = props;
   const btnClasses = cx({
-    [classes.root]: true,
+    [classes.button]: true,
     [classes[`${size}`]]: size,
     [classes[`${color}`]]: color,
     [classes.round]: round,

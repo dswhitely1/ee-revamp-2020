@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import { transition } from 'styles/common';
 
 export const containerStyles = makeStyles((theme) => ({
-  root: {
+  container: {
     textAlign: 'center',
     borderRadius: 3,
     paddingTop: theme.spacing(2),

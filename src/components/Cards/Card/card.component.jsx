@@ -21,7 +21,7 @@ function Card({
 }) {
   const classes = cardStyles();
   const cardClasses = cx({
-    [classes.root]: true,
+    [classes.card]: true,
     [classes.cardPlain]: plain,
     [classes.cardProfile]: profile || testimonial,
     [classes.cardBlog]: blog,
@@ -63,6 +63,7 @@ Card.propTypes = {
   product: PropTypes.bool,
   chart: PropTypes.bool,
   login: PropTypes.bool,
+  pricing: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 

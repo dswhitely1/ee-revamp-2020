@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import { whiteColor } from 'styles/common';
 
 export const imageStyles = makeStyles((theme) => ({
-  root: {
+  image: {
     padding: theme.spacing(0.5),
     backgroundColor: whiteColor,
     border: '1px solid #dee236',

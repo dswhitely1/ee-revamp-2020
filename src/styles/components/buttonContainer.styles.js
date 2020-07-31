@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 
 export const buttonContainerStyles = makeStyles((theme) => ({
-  root: {
+  buttonContainer: {
     margin: theme.spacing(3, 0),
     display: 'flex',
     flexDirection: 'column',

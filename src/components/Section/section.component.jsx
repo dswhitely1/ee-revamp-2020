@@ -6,7 +6,7 @@ import { sectionStyles } from 'styles/components/section.styles';
 function Section({ children, className, header, inverted, ...rest }) {
   const classes = sectionStyles();
   const sectionClasses = cx({
-    [classes.root]: true,
+    [classes.section]: true,
     [classes.header]: header,
     [classes.inverted]: inverted,
     [className]: className !== undefined,

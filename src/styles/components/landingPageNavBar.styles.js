@@ -16,7 +16,7 @@ import {
 } from 'styles/common';
 
 export const landingPageNavBarStyles = makeStyles((theme) => ({
-  root: {
+  appBar: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
     borderBottom: 0,

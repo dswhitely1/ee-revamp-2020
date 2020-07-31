@@ -46,7 +46,7 @@ function colorButton(color) {
 }
 
 export const buttonStyles = makeStyles((theme) => ({
-  root: {
+  button: {
     minHeight: 'auto',
     minWidth: 'auto',
     backgroundColor: grayColor[0],

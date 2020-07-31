@@ -20,7 +20,7 @@ function Footer({ fluid, white }) {
   });
 
   return (
-    <footer className={classes.root}>
+    <footer className={classes.footer}>
       <div className={container}>
         <List className={classes.list}>
           {footerLinks.map(({ title, link, key }) => (

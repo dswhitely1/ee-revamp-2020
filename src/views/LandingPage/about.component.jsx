@@ -33,7 +33,7 @@ function About() {
             round
             color="primary"
           />
-          <LandingPageButton scrollButton round color="primary" />
+          <LandingPageButton scrollButton simple size="lg" color="primary" />
         </ButtonContainer>
       </Container>
     </Section>
