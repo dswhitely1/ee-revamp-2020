@@ -8,7 +8,7 @@ import footerLinks from './footerLinks.js';
 
 function Footer({ fluid, white }) {
   const classes = footerStyles();
-  const classPrefix = 'footer';
+
   const container = cx({
     [classes.container]: !fluid,
     [classes.containerFluid]: fluid,

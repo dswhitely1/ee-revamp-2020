@@ -6,6 +6,8 @@ import GridItem from 'components/Grid/gridItem.component';
 import Typography from 'components/Typography/typography.component';
 import Card from 'components/Cards/Card/card.component';
 import CardBody from 'components/Cards/CardBody/cardBody.component';
+import CardFooter from 'components/Cards/CardFooter/cardFooter.component';
+import LandingPageButton from './landingPageButton';
 
 const testimonials = [
   {
@@ -39,15 +41,24 @@ function Testimonials() {
         <GridContainer>
           {testimonials.map(({ author, content, id }) => (
             <GridItem xs={12} sm={6} key={id}>
-              <Card>
+              <Card testimonial>
                 <CardBody>
                   <Typography content={content} />
-                  <cite>{author}</cite>
                 </CardBody>
+                <CardFooter testimonial>
+                  <cite>{author}</cite>
+                </CardFooter>
               </Card>
             </GridItem>
           ))}
         </GridContainer>
+        <LandingPageButton
+          content="Our Goals"
+          color="primary"
+          round
+          link="goals"
+        />
+        <LandingPageButton color="primary" simple size="lg" scrollButton />
       </Container>
     </Section>
   );
