@@ -8,6 +8,7 @@ import Card from 'components/Cards/Card/card.component';
 import CardBody from 'components/Cards/CardBody/cardBody.component';
 import CardFooter from 'components/Cards/CardFooter/cardFooter.component';
 import LandingPageButton from './landingPageButton';
+import ButtonContainer from 'components/ButtonContainer/buttonContainer.component';
 
 const testimonials = [
   {
@@ -41,7 +42,7 @@ function Testimonials() {
         <GridContainer>
           {testimonials.map(({ author, content, id }) => (
             <GridItem xs={12} sm={6} key={id}>
-              <Card testimonial>
+              <Card testimonial raised>
                 <CardBody>
                   <Typography content={content} />
                 </CardBody>
@@ -52,13 +53,15 @@ function Testimonials() {
             </GridItem>
           ))}
         </GridContainer>
-        <LandingPageButton
-          content="Our Goals"
-          color="primary"
-          round
-          link="goals"
-        />
-        <LandingPageButton color="primary" simple size="lg" scrollButton />
+        <ButtonContainer>
+          <LandingPageButton
+            content="Our Goals"
+            color="primary"
+            round
+            link="goals"
+          />
+          <LandingPageButton color="primary" simple size="lg" scrollButton />
+        </ButtonContainer>
       </Container>
     </Section>
   );

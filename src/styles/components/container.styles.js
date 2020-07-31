@@ -40,7 +40,7 @@ export const containerStyles = makeStyles((theme) => ({
   },
   background: {
     backgroundColor: theme.palette.background.default,
-    opacity: 0.8,
+    opacity: 0.9,
     ...transition,
     '&:hover': {
       opacity: 1,
@@ -54,7 +54,7 @@ export const containerStyles = makeStyles((theme) => ({
     backgroundColor: '#351a1a',
     color: theme.palette.secondary.main,
     ...transition,
-    opacity: 0.8,
+    opacity: 0.9,
     '&:hover': {
       opacity: 1,
       ...transition,
